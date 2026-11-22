@@ -24,6 +24,7 @@ class BookController extends Controller
         $data = $request->all();
 
         $book = new Book($data);
+        $book->save();
 
         return redirect('/books')->with('success', 'Buku berhasil ditambahkan.');
     }
