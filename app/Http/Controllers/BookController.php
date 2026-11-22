@@ -9,9 +9,9 @@ class BookController extends Controller
 {
     public function index()
     {
-        $daftarBuku = Book::latest()->get();
+        $books = Book::latest()->get();
 
-        return view('books.index', compact('daftarBuku'));
+        return view('books.index', compact('books'));
     }
 
     public function create()
